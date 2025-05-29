@@ -1,0 +1,35 @@
+@use "colors" as colors;
+
+:root {
+  /* Blues */
+  --weber-blue-dark: #{colors.$weber-blue-dark};
+  --weber-blue-dark-hover: #{colors.$weber-blue-dark-hover};
+  --weber-blue-light: #{colors.$weber-blue-light};
+  --weber-blue-lighter: #{colors.$weber-blue-lighter};
+  --weber-blue-lighter-hover: #{colors.$weber-blue-lighter-hover};
+  --weber-blue-25: #{colors.$weber-blue-25};
+  --weber-blue-overlay-rgb: #{colors.$weber-blue-overlay-rgb};
+
+  /* Oranges */
+  --weber-orange: #{colors.$weber-orange};
+  --weber-orange-hover: #{colors.$weber-orange-hover};
+
+  /* Greys */
+  --weber-lightest-grey: #{colors.$weber-lightest-grey};
+  --weber-light-grey: #{colors.$weber-light-grey};
+  --weber-light-grey-2: #{colors.$weber-light-grey-2};
+  --weber-grey: #{colors.$weber-grey};
+  --weber-grey-dark: #{colors.$weber-grey-dark};
+  --weber-dark-grey: #{colors.$weber-dark-grey};
+  --weber-bg-grey: #{colors.$weber-bg-grey};
+  --weber-grey-light: #{colors.$weber-grey-light};
+  --weber-grey-border: #{colors.$weber-grey-border};
+
+  /* Backgrounds */
+  --weber-bg-white: #{colors.$weber-bg-white};
+
+  /* Text */
+  --weber-content-black: #{colors.$weber-content-black};
+  --weber-black: #{colors.$weber-black};
+  --weber-white: #{colors.$weber-white};
+}

@@ -1,0 +1,61 @@
+// -----------------------------------------------------------------------------
+// Angular Material Theming Configuration
+// -----------------------------------------------------------------------------
+
+// Import Angular Material theming utilities
+@use "@angular/material" as mat;
+
+// Include Material core styles (required once in your app)
+@include mat.core();
+
+// Define color palettes for your theme
+$primary: mat.define-palette(
+  mat.$blue-grey-palette,
+  100,
+  200,
+  500
+); // Main brand color
+$accent: mat.define-palette(
+  mat.$blue-palette,
+  A100,
+  A200,
+  A400
+); // Accent color
+$warn: mat.define-palette(mat.$red-palette); // Warn/error color
+
+// Light theme object
+$light-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $primary,
+      accent: $accent,
+      warn: $warn,
+    ),
+    typography: mat.define-typography-config(),
+    density: 0,
+  )
+);
+
+// Dark theme object for future use or toggling
+$dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $primary,
+      accent: $accent,
+      warn: $warn,
+    ),
+  )
+);
+
+// Apply the light theme globally to all Angular Material components
+@include mat.all-component-themes($light-theme);
+
+// Enable dark theme support via a CSS class (for runtime toggling)
+.dark-theme {
+  @include mat.all-component-colors($dark-theme);
+  // Add any dark-theme specific overrides here if needed
+}
+
+// -----------------------------------------------------------------------------
+// End of Angular Material Theming Configuration
+// -----------------------------------------------------------------------------
